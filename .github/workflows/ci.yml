@@ -1,0 +1,27 @@
+name: CI for React App
+
+on:
+  push:
+    branches: ["main"]   # when code is pushed
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest   # 🚀 Windows runner for CI
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build React app
+        run: npm run build
