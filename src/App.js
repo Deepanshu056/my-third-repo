@@ -15,8 +15,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>My name is {name} and </h1><h1> my age is {age}</h1>
-        <h1>{a+b}</h1>
-        <h1>{c*d}</h1>
+        <h1>This is your add value = {a+b}</h1>
+        <h1>This is your multiply value = {c*d}</h1>
 
       </header>
     </div>
